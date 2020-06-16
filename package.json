@@ -1,17 +1,13 @@
 {
-  "name": "bossy-frontend",
+  "name": "bossy",
   "version": "1.0.0",
-  "private": true,
-  "main": "index.js",
-  "scripts": {
-    "start": "react-scripts start",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "homepage": "https://github.com/BOSSY-LEAD-LIFE/bossy-frontend#readme",
+  "private": false,
   "dependencies": {
     "@reach/router": "^1.3.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
     "axios": "^0.18.1",
-    "express": "^4.17.1",
     "history": "^4.10.1",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
@@ -19,12 +15,14 @@
     "react-scripts": "3.4.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "redux": "^4.0.5",
     "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "cross-env PORT=8000 mocha --watch"
   },
   "eslintConfig": {
     "extends": "react-app"
